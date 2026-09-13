@@ -43,19 +43,26 @@ $$m_{\text{AUW}} = m_{\text{frame}} + N_{\text{rotors}} \cdot (m_{\text{motor}} 
 
 ### 2. Hover Equilibrium Velocity
 $$T_{\text{hov}} = \frac{m_{\text{AUW}} \cdot g}{N_{\text{rotors}}}$$
+
 $$n_{\text{hov}} = \sqrt{\frac{T_{\text{hov}}}{C_T \cdot \rho \cdot D^4}}$$
 
 ### 3. Electromechanical & Battery Bus Equilibrium
 $$Q_{\text{hov}} = \frac{C_P}{2\pi} \rho n_{\text{hov}}^2 D^5$$
+
 $$I_{m,\text{hov}} = \frac{2\pi K_v}{60} Q_{\text{hov}} + I_0$$
-$$I_{\text{bus,\text{hov}}} = N_{\text{rotors}} \cdot I_{m,\text{hov}} + I_{\text{avionics}}$$
-$$V_{\text{bat,loaded}} = S \cdot V_{\text{cell,nom}} - I_{\text{bus,\text{hov}}} \cdot (S \cdot R_{\text{cell}})$$
+
+$$I_{\text{bus,hov}} = N_{\text{rotors}} \cdot I_{m,\text{hov}} + I_{\text{avionics}}$$
+
+$$V_{\text{bat,loaded}} = S \cdot V_{\text{cell,nom}} - I_{\text{bus,hov}} \cdot (S \cdot R_{\text{cell}})$$
+
 $$\delta_{\text{hov}} = \frac{\frac{2\pi n_{\text{hov}}}{K_{v,\text{SI}}} + I_{m,\text{hov}} R_m}{V_{\text{bat,loaded}}}$$
-$$t_{\text{hover}} = \frac{C_{\text{bat}} \cdot \text{DoD}}{I_{\text{bus,\text{hov}}}} \times 60 \quad [\text{minutes}]$$
+
+$$t_{\text{hover}} = \frac{C_{\text{bat}} \cdot \text{DoD}}{I_{\text{bus,hov}}} \cdot 60$$
 
 ### 4. Maximum Throttle Equilibrium
 At full duty cycle ($\delta = 1.0$), solve for maximum rotational velocity $n_{\text{max}}$ where:
 $$V_{\text{bat}}(n_{\text{max}}) - \left[ E_b(n_{\text{max}}) + I_m(n_{\text{max}}) R_m \right] = 0$$
+
 $$\text{TWR} = \frac{N_{\text{rotors}} \cdot C_T \rho n_{\text{max}}^2 D^4}{m_{\text{AUW}} \cdot g}$$
 
 ---

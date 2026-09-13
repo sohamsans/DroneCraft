@@ -78,10 +78,10 @@ $$n_{\text{hov}} = \sqrt{\frac{T_{\text{hov}}}{C_T \rho D^4}}$$
 #### Step 3: Electrical & Voltage Droop
 $$\text{Torque } Q_{\text{hov}} = \frac{C_P}{2\pi} \rho n_{\text{hov}}^2 D^5$$
 $$\text{Motor Current } I_{m,\text{hov}} = \frac{2\pi K_v}{60} Q_{\text{hov}} + I_0$$
-$$I_{\text{bus,\text{hov}}} = N_{\text{rotors}} \cdot I_{m,\text{hov}} + I_{\text{avionics}}$$
-$$V_{\text{bat,actual}} = S \cdot V_{\text{cell,nom}} - I_{\text{bus,\text{hov}}} \cdot (S \cdot R_{\text{cell}})$$
+$$I_{\text{bus,hov}} = N_{\text{rotors}} \cdot I_{m,\text{hov}} + I_{\text{avionics}}$$
+$$V_{\text{bat,actual}} = S \cdot V_{\text{cell,nom}} - I_{\text{bus,hov}} \cdot (S \cdot R_{\text{cell}})$$
 $$\text{Hover Duty Cycle } \delta_{\text{hov}} = \frac{\frac{2\pi n_{\text{hov}}}{K_{v,\text{SI}}} + I_{m,\text{hov}} R_m}{V_{\text{bat,actual}}}$$
-$$\text{Hover Time } t_{\text{hov}} = \frac{C_{\text{bat}} \cdot \text{DoD}}{I_{\text{bus,\text{hov}}}} \times 60 \quad [\text{mins}]$$
+$$\text{Hover Time } t_{\text{hov}} = \frac{C_{\text{bat}} \cdot \text{DoD}}{I_{\text{bus,hov}}} \times 60$$
 
 #### Step 4: Max Throttle & Flight Dynamics
 Solve non-linear equation for $n_{\text{max}}$ at full battery terminal voltage ($\delta = 1.0$). Compute $\text{TWR} = \frac{N_{\text{rotors}} T_{\text{max}}}{m_{\text{AUW}} g}$, top speed, and thermal dissipation.
